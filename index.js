@@ -73,7 +73,7 @@ app.get('/tasks/edit-text', (req, res) => {
 
 // Delete a Task from the Task List
 function deleteTask(ele, taskId) {
-  return ele !== taskId;
+  return ele.taskId !== taskId;
 }
 app.get('/tasks/delete', (req, res) => {
   let taskId = parseInt(req.query.taskId);
